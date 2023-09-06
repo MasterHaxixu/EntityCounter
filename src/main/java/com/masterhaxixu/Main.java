@@ -37,7 +37,7 @@ public class Main extends JavaPlugin {
                     });
 
                 } else
-                    sender.sendMessage("No world with the name " + ChatColor.RED + args[0] + " was found!");
+                    sender.sendMessage(ChatColor.RED + "No world with the name '" + args[0] + "' was found!");
 
             } else {
                 getServer().getWorlds().forEach(world -> {
@@ -49,11 +49,11 @@ public class Main extends JavaPlugin {
             }
             String msg = "Entity Counts in $WORLD:";
             if (args.length > 0)
-                sender.sendMessage(msg.replace("$WORLD", args[0]));
+                sender.sendMessage(msg.replace("$WORLD", ChatColor.AQUA + args[0]));
             else
-                sender.sendMessage(msg.replace("$WORLD", "All Worlds"));
+                sender.sendMessage(msg.replace("$WORLD", ChatColor.AQUA + "All Worlds"));
             for (Map.Entry<EntityType, Integer> entry : entityCounts.entrySet()) {
-                sender.sendMessage(entry.getKey().name() + ": " + entry.getValue());
+                sender.sendMessage(ChatColor.YELLOW + entry.getKey().name() + ": " + entry.getValue());
             }
             return true;
         }
