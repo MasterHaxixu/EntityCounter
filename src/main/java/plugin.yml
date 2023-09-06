@@ -1,0 +1,11 @@
+name: EntityCounter
+version: 1.0
+main: com.masterhaxixu.Main
+description: A plugin to list the number of each entity type alive.
+author: MasterHaxixu
+api-version: 1.19
+
+commands:
+  entitycounter:
+    description: List the number of each entity type alive.
+    usage: /entitycounter
